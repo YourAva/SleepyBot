@@ -20,11 +20,11 @@ module.exports = {
         .setAuthor({ name: 'SleepyBot', iconURL: 'https://i.pinimg.com/originals/be/b4/94/beb4949b6b3ef3402acdabc402f8fd10.jpg'})
         .setThumbnail('https://i.pinimg.com/originals/be/b4/94/beb4949b6b3ef3402acdabc402f8fd10.jpg')
         .addFields(
-            { name: '🦾Helpful', value: '•/about\n•/help\n•/invite\n•/membercount\n•/sum\n•/ping\n•/weather',inline: true},
+            { name: '🦾Helpful', value: '•/about\n•/help\n•/invite\n•/membercount\n•/sum\n•/ping\n•/weather\n•binary-convert',inline: true},
             { name: '🍔Miscellaneous', value: '•/8ball\n•/console\n•/in-the-end\n•/roll\n•/serveramount', inline: true},
             { name: '\u200B', value: '\u200B' },
             { name: '🤔Reactions', value: '•/angry\n•/kill\n•/smash', inline: true},
-            { name: '🎊Fun', value: '•/joke\n•/img', inline: true},
+            { name: '🎊Fun', value: '•/joke\n•/img\n•/confession', inline: true},
         )
         interaction.reply({ embeds: [helpEmbed]})
     }
