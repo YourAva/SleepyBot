@@ -4,7 +4,8 @@
   "description": "Discord bot lol",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
   },
   "author": "Ava",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "node-fetch": "^3.3.1",
     "sequelize": "^6.31.1",
     "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
