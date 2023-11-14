@@ -1,15 +1,13 @@
-//Defining shiz
+//Defining stuff
 
 require('dotenv').config();
 
-const { Client, IntentsBitField, Application, ApplicationCommandOptionType, Collection} = require('discord.js');
+const { Client, IntentsBitField, Application, ApplicationCommandOptionType} = require('discord.js');
 
 //Command cooldowns defenitions
-const talkedRecentlyAbout = new Set();
-const talkedRecentlyWeather = new Set();
-const talkedRecentlyInTheEnd = new Set();
+//const talkedRecentlyAbout = new Set(); -- When defining a cooldown const, make sure to export it on the line below.
 
-module.exports = {Client, IntentsBitField, Application, ApplicationCommandOptionType, talkedRecentlyAbout, talkedRecentlyWeather, talkedRecentlyInTheEnd};
+module.exports = {Client, IntentsBitField, Application, ApplicationCommandOptionType,};
 const eventHandler = require('./handlers/eventHandler');
 
 const client = new Client({ //Defines the new client along with Intents.
@@ -21,6 +19,6 @@ const client = new Client({ //Defines the new client along with Intents.
   ],
 });
 
-eventHandler(client);
+eventHandler(client); // Call the eventHandler function (Basically just run eventHandler.js )
 
 client.login(process.env.TOKEN); //Login via client. ((Token stored externally for security.))
