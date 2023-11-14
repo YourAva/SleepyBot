@@ -1,16 +1,22 @@
 {
-  "name": "selectbot",
+  "name": "sleepybot",
   "version": "1.0.0",
-  "description": "Select's discord testing bot.",
-  "main": "index.js",
+  "description": "Discord bot lol",
+  "main": "src/index.js",
   "scripts": {
-    "test": "test",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js"
   },
-  "author": "Select",
+  "author": "Ava",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.13.0",
-    "dotenv": "^16.3.1"
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3",
+    "node-fetch": "^3.3.1",
+    "sequelize": "^6.31.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
