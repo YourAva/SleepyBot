@@ -18,8 +18,14 @@ module.exports = {
     callback: (client, interaction) => {
         const confession = interaction.options.get('confession').value;
         const channel = client.channels.cache.get(process.env.CONFESSION_CHANNEL)
+        const channelMessage = `**A new confession has been made!**\n\n\"${confession}\"`
+
+        if(channelMessage.length < 2001){
+            channel.send(`${channelMessage}`)
+            interaction.reply({content:"Your confession has been sent to the official SleepyBot discord server.",ephemeral: true});
+        } else {
+            interaction.reply({content: "Your message was over the character limit. Try again.", ephemeral: true});
+        }
         
-        channel.send(`**A new confession has been made!**\n\n\"${confession}\"`)
-        interaction.reply({content:"Your confession has been sent to the official SleepyBot discord server.",ephemeral: true});
     },
   };
